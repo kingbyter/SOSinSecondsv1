@@ -17,8 +17,6 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-    resValue "string", "google_maps_key",
-            (project.findProperty("GOOGLE_MAPS_API_KEY") ?: "")
 }
 
 dependencies {
@@ -29,4 +27,8 @@ dependencies {
     compile 'com.android.support:appcompat-v7:26.+'
     compile 'com.android.support.constraint:constraint-layout:1.0.0-alpha8'
     testCompile 'junit:junit:4.12'
+
+    //makes the gradle find the google maps api key
+    resValue "string", "google_maps_key",
+            (project.findProperty("GOOGLE_MAPS_API_KEY") ?: "")
 }
