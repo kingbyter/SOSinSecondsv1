@@ -45,9 +45,10 @@ public class MainActivity extends AppCompatActivity {
         // Construct a FusedLocationProviderClient.
         fusedLocationProvider = LocationServices.getFusedLocationProviderClient(this);
 
+    }
+    public void sendLocation(){
         ActivityCompat.requestPermissions(this,new String[]{android.Manifest.permission.ACCESS_FINE_LOCATION},
                 MY_PERMISSIONS_REQUEST_USE_LOCATION);
-
     }
 
     public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults) {
