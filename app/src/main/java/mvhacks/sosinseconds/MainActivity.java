@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
 
         // Construct a PlaceDetectionClient.
         placeDetection = Places.getPlaceDetectionClient(this, null);
-
+//
         // Construct a FusedLocationProviderClient.
         fusedLocationProvider = LocationServices.getFusedLocationProviderClient(this);
 
