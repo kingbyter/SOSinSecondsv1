@@ -4,47 +4,69 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/cast_intro_overlay_background_color"
     tools:context="mvhacks.sosinseconds.MainActivity">
 
     <TextView
-        android:layout_width="382dp"
-        android:layout_height="115dp"
+        android:layout_width="311dp"
+        android:layout_height="97dp"
         android:text="Hit the button to notify your contacts in an emergency!"
+        android:textAlignment="center"
         android:textAppearance="@android:style/TextAppearance.Material.Caption"
-        android:textColor="@android:color/black"
+        android:textColor="@android:color/holo_green_light"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.51"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        tools:layout_editor_absoluteX="-77dp" />
+        app:layout_constraintVertical_bias="0.091" />
 
     <Button
         android:id="@+id/buttonE"
-        android:layout_width="347dp"
-        android:layout_height="126dp"
+        android:layout_width="379dp"
+        android:layout_height="179dp"
+        android:layout_marginRight="-64dp"
+        android:background="@android:color/holo_red_light"
+        android:backgroundTint="@android:color/holo_red_dark"
+        android:elevation="24dp"
+        android:onClick="sendLocation"
         android:text="EMERGENCY"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="115dp" />
+        android:textColor="@android:color/white"
+        android:textSize="30sp"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_editor_absoluteY="166dp" />
 
     <Button
         android:id="@+id/buttonAddContact"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/add_contact"
         android:onClick="storeContact"
-        tools:layout_editor_absoluteX="248dp"
+        android:text="@string/add_contact"
+        tools:layout_editor_absoluteX="242dp"
         tools:layout_editor_absoluteY="447dp" />
 
     <EditText
         android:id="@+id/editText_Contact"
-        android:hint="@string/enter_contact"
         android:layout_width="233dp"
         android:layout_height="44dp"
-        tools:layout_editor_absoluteX="16dp"
+        android:layout_marginRight="9dp"
+        android:hint="@string/enter_contact"
+        android:inputType="phone"
+        android:shadowColor="@color/colorAccent"
+        android:textColor="@color/wallet_holo_blue_light"
+        android:textColorHint="@android:color/holo_red_light"
+        app:layout_constraintRight_toLeftOf="@+id/buttonAddContact"
         tools:layout_editor_absoluteY="451dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="361dp"
+        android:layout_height="37dp"
+        android:text="Enter as 1(Area Code) Number (no parentheses or dashes)"
+        android:textColor="@android:color/holo_orange_light"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="410dp" />
 
 </android.support.constraint.ConstraintLayout>

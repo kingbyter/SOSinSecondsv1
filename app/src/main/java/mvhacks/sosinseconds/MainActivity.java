@@ -8,6 +8,8 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.telephony.PhoneNumberUtils;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import com.google.android.gms.common.GooglePlayServicesNotAvailableException;
@@ -22,6 +24,9 @@ import com.google.android.gms.location.places.ui.PlacePicker;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
     private final int MY_PERMISSIONS_REQUEST_USE_LOCATION = 3;
@@ -50,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-    public void sendLocation(){
+    public void sendLocation(android.view.View view){
         ActivityCompat.requestPermissions(this,new String[]{android.Manifest.permission.ACCESS_FINE_LOCATION},
                 MY_PERMISSIONS_REQUEST_USE_LOCATION);
     }
@@ -84,6 +89,14 @@ public class MainActivity extends AppCompatActivity {
 
             // other 'case' lines to check for other
             // permissions this app might request
+        }
+    }
+    public ArrayList<Integer> contacts = new ArrayList<Integer> ();
+    public void storeContact(android.view.View view) {
+        EditText editText = findViewById(R.id.editText_Contact);
+        if(editText != null || editText.length() < 11) {
+            contacts.add(Integer.parseInt(editText.getText().toString()));
+
         }
     }
 

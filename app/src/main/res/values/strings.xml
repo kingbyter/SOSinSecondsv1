@@ -1,5 +1,5 @@
 <resources>
     <string name="app_name">SOSinSeconds</string>
     <string name="add_contact">Add Contact</string>
-    <string name="enter_contact">Enter contact</string>
+    <string name="enter_contact">Enter contact phone #</string>
 </resources>
