@@ -134,7 +134,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(Intent.createChooser(intent, "Select app"));
             }
         }
-    }//hi
+    }
 
 
 /*   TODO:           ONLY NEED LOCATION, NOT ACTUAL MAP OF LOCATION, SO THIS IS NOT NEEDED. POSSIBLY ADD IMPLEMENTATION FOR MAPS LATER ON.
